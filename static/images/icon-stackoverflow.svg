@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="28px" viewBox="0 0 22 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-stackoverflow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header" transform="translate(-1173.000000, -26.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="icon-stackoverflow" transform="translate(1173.000000, 26.000000)">
+                <path d="M14.3387963,23.9948902 L3.00097614,24 L3,21.6651025 L14.3373321,21.6594549 L14.3387963,23.9948902 Z M22,10.7713348 L20.0604874,0 L17.6744623,0.399234655 L19.613696,11.1705695 L22,10.7713348 Z M14.6114171,18.6656656 L3.32198545,17.6626037 L3.09970533,19.9881556 L14.3893462,20.9902763 L14.6114171,18.6656656 Z M15.3562089,15.6186944 L4.40779735,12.7807532 L3.77874739,15.0354406 L14.727926,17.873718 L15.3562089,15.6186944 Z M16.785551,12.9478966 L7.02014658,7.39390918 L5.78937844,9.4044705 L15.5552709,14.9587941 L16.785551,12.9478966 Z M19.1800824,11.3125001 L12.7923179,2.27976569 L10.7915179,3.59519614 L17.1795613,12.6275272 L19.1800824,11.3125001 Z" id="Shape"></path>
+                <polygon id="stackoverflow-icon-path" points="16.1484784 16 16.1484784 26.0677095 1.86090012 26.0677095 1.86090012 16 0 16 0 28 18 28 18 16"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
