@@ -1,10 +1,12 @@
-/* ---------- Typography Tweaks --------- */
+/* ---------- Variables --------- */
 
 
 /* ---------- Import in Bootstrap & Fonts --------- */
 @import "bootstrap-4.0.0/scss/bootstrap.scss";
+@import "fontfaces.scss";
 
 body {
     background-color: blue;
-    // font-size: 20px;
+    // font-family: 'SF Mono';
+    font-family: 'Akkurat';
 }
