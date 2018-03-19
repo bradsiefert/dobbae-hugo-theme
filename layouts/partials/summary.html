@@ -1,13 +1,25 @@
-	<article>
-		<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-		<time>{{ .Date.Format "02.01.2006 15:04" }}</time>
-		{{ range .Params.tags }}
-		<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-		{{ end }}
-		<div>
-			{{ .Summary }}
-			{{ if .Truncated }}
-				<a href="{{ .Permalink }}">Read more...</a>
-			{{ end }}
-		</div>
-	</article>
+<article class="post">
+	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+    <ul class="list-inline post-info">
+        <li class="list-inline-item">
+            {{ .Date.Format "2006/02/01" }}
+        </li>
+        <li class="list-inline-item">
+            {{ if eq .Section "post" }}
+                <span class="article-duration">{{ .ReadingTime }} min read</span>
+            {{ end }}
+        </li>
+    </ul>
+
+	<!-- {{ range .Params.tags }}
+	<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+	{{ end }} -->
+
+    <p>{{ .Summary }}</p>
+
+    {{ if .Truncated }}
+		<a class="btn btn-warning" href="{{ .Permalink }}">Read Post</a>
+	{{ end }}
+
+</article>

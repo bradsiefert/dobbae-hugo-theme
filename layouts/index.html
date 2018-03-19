@@ -1,10 +1,16 @@
 {{ partial "header.html" . }}
 	<main>
-		{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
-		{{ range $paginator.Pages }}
-			{{ partial "summary.html" . }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
+        <div class="container posts-wrap">
+            <div class="row justify-content-md-center">
+                <div class="col col-12">
+                    <h1>2018 Posts</h1>
+                    {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+            		{{ range $paginator.Pages }}
+            			{{ partial "summary.html" . }}
+            		{{ end }}
+            		{{ partial "pagination.html" . }}
+                </div>
+            </div>
+        </div>
 	</main>
-{{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}

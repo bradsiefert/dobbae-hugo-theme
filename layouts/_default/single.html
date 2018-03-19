@@ -1,22 +1,28 @@
 {{ partial "header.html" . }}
-	<main>
-		<article>
-			<h1>{{ .Title }}</h1>
-			<time>{{ .Date.Format "02.01.2006 15:04" }}</time>
-			<div>
-				{{ .Content }}
-			</div>
-			<div>
-				<ul id="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
-					{{ end }}
-				</ul>
-			</div>
-			<div>
-				{{ template "_internal/disqus.html" . }}
-			</div>
-		</article>
-	</main>
-{{ partial "sidebar.html" . }}
+<main>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-10">
+                <article class="post">
+
+
+            		<h2 class="post-detail">{{ .Title }}</h2>
+
+                    <ul class="list-inline post-info">
+                        <li class="list-inline-item">
+                            {{ .Date.Format "2006/02/01" }}
+                        </li>
+                        <li class="list-inline-item">
+                            {{ if eq .Section "post" }}
+                                <span class="article-duration">{{ .ReadingTime }} min read</span>
+                            {{ end }}
+                        </li>
+                    </ul>
+            		{{ .Content }}
+            	</article>
+            </div>
+        </div>
+    </div>
+
+</main>
 {{ partial "footer.html" . }}

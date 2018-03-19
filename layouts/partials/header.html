@@ -8,18 +8,57 @@
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}
 </head>
 <body>
 	<header>
-        <h1>I'm a Header that Brad put here</h1>
-        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-		<nav>
-			<ul>
-				{{ range .Site.Menus.main }}
-				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-				{{ end }}
-			</ul>
-		</nav>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container nav-wrap">
+                <a href="/" class="navbar-brand">
+                    <img src="/images/logo.svg" alt="Amanda Dobbyn blog logo">
+                </a>
+                <button class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarToggle"
+                        aria-controls="navbarToggle"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item nav-image">
+                            <a class="nav-link" target="_new" href="https://twitter.com/dobbleobble">
+                                <img src="/images/icon-twitter.svg" alt="Twitter Logo">
+                            </a>
+                        </li>
+                        <li class="nav-item nav-image">
+                            <a class="nav-link" target="_new" href="https://github.com/aedobbyn">
+                                <img src="/images/icon-github.svg" alt="Github Logo">
+                            </a>
+                        </li>
+                        <li class="nav-item nav-image">
+                            <a  class="nav-link"
+                                target="_new"
+                                href="https://stackoverflow.com/users/5526527/amanda?tab=answers">
+                                <img src="/images/icon-stackoverflow.svg" alt="Stackoverflow Logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 	</header>
