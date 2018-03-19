@@ -1,11 +1,16 @@
 {{ partial "header.html" . }}
-    <h1>list html</h1>
 	<main>
-		{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-		{{ range $paginator.Pages }}
-			{{ partial "summary.html" . }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
+        <div class="container posts-wrap">
+            <div class="row justify-content-md-center">
+                <div class="col col-12">
+                    <h2>Posts</h2>
+                    {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+            		{{ range $paginator.Pages }}
+            			{{ partial "summary.html" . }}
+            		{{ end }}
+            		{{ partial "pagination.html" . }}
+                </div>
+            </div>
+        </div>
 	</main>
-{{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}

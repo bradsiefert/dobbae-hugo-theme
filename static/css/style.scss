@@ -1,4 +1,4 @@
-/* ---------- Updating Bootstrap 4 Variables --------- */
+/* ---------- Customizin Bootstrap 4 Variables --------- */
 $white: #fff;
 $grid-gutter-width:     32px !default;
 $container-max-widths:  (sm: 544px, md: 736px, lg: 960px, xl: 1168px) !default;
@@ -88,15 +88,8 @@ footer {
     margin-bottom: 16px;
 }
 
-h1 {
-    font-family: 'Akkurat';
-    font-size: 16px;
-    color: #222222;
-    letter-spacing: 0;
-    margin-bottom: 16px;
-}
-
-h2 {
+h1,
+.post h2 {
     font-family: 'SF Mono';
     font-weight: normal;
     font-style: normal;
@@ -105,14 +98,24 @@ h2 {
     letter-spacing: -0.4px;
 }
 
-h2.post-detail {
+h1.post-detail {
     color: #333;
 }
 
-h2 a,
-h2 a:link,
-h2 a:hover {
+h1 a,
+h1 a:link,
+h1 a:hover {
     color: $purple;
+}
+
+h2 {
+    font-family: 'SF Mono';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #222222;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
 }
 
 h3, .h3 {

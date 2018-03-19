@@ -8,7 +8,6 @@
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}
 </head>
@@ -35,10 +34,10 @@
                             <a class="nav-link" href="/">Posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CV</a>
+                            <a class="nav-link" href="/vitae/">CV</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="/about/">About</a>
                         </li>
                         <li class="nav-item nav-image">
                             <a class="nav-link" target="_new" href="https://twitter.com/dobbleobble">

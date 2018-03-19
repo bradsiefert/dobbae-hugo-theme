@@ -4,10 +4,9 @@
         <div class="row justify-content-md-center">
             <div class="col col-10">
                 <article class="post">
-
-
-            		<h2 class="post-detail">{{ .Title }}</h2>
-
+            		<h1 class="post-detail">
+                        {{ .Title }}
+                    </h1>
                     <ul class="list-inline post-info">
                         <li class="list-inline-item">
                             {{ .Date.Format "2006/02/01" }}
@@ -23,6 +22,5 @@
             </div>
         </div>
     </div>
-
 </main>
 {{ partial "footer.html" . }}
