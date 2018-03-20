@@ -6694,6 +6694,9 @@ article.post {
   letter-spacing: 0;
   line-height: 1.4rem; }
 
+article.post img {
+  width: 100%; }
+
 pre {
   background-color: #f5f5f5;
   padding: 8px 16px;
