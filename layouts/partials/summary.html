@@ -8,13 +8,10 @@
         </li>
         <li class="list-inline-item">
             {{ if eq .Section "post" }}
-                <span class="article-duration">{{ .ReadingTime }} min read</span>
+                {{ .ReadingTime }} min read
             {{ end }}
         </li>
     </ul>
-	<!-- {{ range .Params.tags }}
-	<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-	{{ end }} -->
-    <p>{{ truncate 192 .Content }}</p>
+    {{ truncate 192 .Content }}
 	<a class="btn btn-warning" href="{{ .Permalink }}">Read Post</a>
 </article>

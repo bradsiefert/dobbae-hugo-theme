@@ -22,15 +22,29 @@ $navbar-dark-toggler-border-color:  transparent !default;
 $navbar-light-toggler-border-color: transparent !default;
 $table-cell-padding:                1.5rem !default;
 
+/* ---------- Sticky Footer --------- */
+
+html { position: relative; height: 100%;}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin-top: 120px; /* This is to offset the sticky header */
+}
+
 /* ---------- Importing --------- */
 @import "bootstrap-4.0.0/scss/bootstrap.scss";
 @import "fontfaces.scss";
 
 body {
-   font-family: 'Akkurat';
+   font-family: 'A';
    font-weight: 400;
    font-style: normal;
-   margin-top: 120px;
 }
 
 .navbar {
@@ -49,9 +63,8 @@ body {
     letter-spacing: 0.4px;
 }
 
-
 @media (max-width: 767px) {
-    // All this nonsense to align the icons horizontally when on mobile...
+    /* All this nonsense to align the icons horizontally when on mobile... */
     .navbar-nav {
         flex-direction: row;
         display: block;
@@ -73,7 +86,7 @@ body {
         margin-left: 12px;
         margin-right: 12px;
     }
-    // ...end nonsense.
+    /* ...end of nonsense. */
 }
 
 .nav-wrap {
@@ -81,7 +94,7 @@ body {
 }
 
 footer {
-    font-family: 'SF Mono';
+    font-family: 'SFM';
     font-size: 11px;
     color: #222222;
     letter-spacing: 0.22px;
@@ -90,12 +103,13 @@ footer {
 
 h1,
 .post h2 {
-    font-family: 'SF Mono';
+    font-family: 'SFM';
     font-weight: normal;
     font-style: normal;
     font-size: 24px;
     color: #3E3C96;
     letter-spacing: -0.4px;
+    margin-bottom: 16px;
 }
 
 h1.post-detail {
@@ -109,7 +123,7 @@ h1 a:hover {
 }
 
 h2 {
-    font-family: 'SF Mono';
+    font-family: 'SFM';
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
@@ -118,26 +132,28 @@ h2 {
     margin-bottom: 16px;
 }
 
-h3, .h3 {
-    font-size: 1.5em;
+h3 {
     margin-top: 4px;
+    font-size: 1.0625rem;
+    color: #222222;
+    letter-spacing: 0;
+    line-height: 1.4;
 }
 
-h4, .h4 {
-    font-size: 1.25em;
-    margin-top: 4px;
-}
-
-h5, .h5 {
+h4 {
     font-size: 1em;
 }
 
-h6, .h6 {
+h5 {
     font-size: .8em;
 }
 
+h6 {
+    font-size: .67em;
+}
+
 .btn {
-    font-family: 'SF Mono';
+    font-family: 'SFM';
     font-weight: normal;
     font-style: normal;
     font-size: 14px;
@@ -150,33 +166,54 @@ h6, .h6 {
 }
 
 .posts-wrap {
-    max-width: 770px;
+    max-width: 768px;
 }
 
 .post-info {
-    font-family: 'SF Mono';
+    font-family: 'SFM';
     font-weight: 400;
     font-style: normal;
     font-size: 11px;
     color: #999999;
     letter-spacing: 0.22px;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+#aboutme .post-info {
+    text-transform: none;
+    margin-bottom: 2rem;
+    color: #222;
 }
 
 .post-info > .list-inline-item {
     margin-right: 1rem;
 }
 
+@media (max-width: 767px) {
+    .post-info > .list-inline-item {
+        margin-bottom: .75rem;
+    }
+
+    #aboutme .post-info {
+        margin-bottom: .75rem;
+    }
+}
+
+.info-highlight {
+    color: $purple;
+}
+
 article.post {
     padding-bottom: 16px;
     margin-bottom: 32px;
     border-bottom: 1px solid #EEEEEE;
-    font-family: 'Akkurat';
+    font-family: 'A';
     font-size: 15px;
     color: #222222;
     letter-spacing: 0;
-    line-height: 24px;
+    line-height: 1.4rem;
 }
 
 pre {
@@ -204,7 +241,41 @@ th {
 
 td {
     padding: 4px 12px;
-    font-family: 'SF Mono';
+    font-family: 'SFM';
     font-size: 12px;
     line-height: 1.2;
+}
+
+.divider {
+    border-bottom: 1px solid #EEEEEE;
+    width: 100%;
+    display: block;
+    height: 1px;
+    margin-bottom: 32px;
+}
+
+#aboutme p {
+    font-size: 18px;
+}
+
+#mycv p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#mycv h2 {
+    border-top: 1px solid #EEEEEE;
+    margin-bottom: 1rem;
+    padding-top: 1.25rem;
+}
+
+#mycv h2:first-of-type {
+    border: none;
+}
+
+#mycv h2 a,
+#mycv h3 a,
+#mycv h4 a,
+#mycv h5 a {
+    color: #333;
 }

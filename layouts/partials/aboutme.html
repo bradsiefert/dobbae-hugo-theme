@@ -1,4 +1,25 @@
-<div id="mycv">
-<h1>About Me</h1>
-{{ .Content }}
+<div id="aboutme">
+    <div class="row">
+        <div class="col-12">
+            <h1>About Me</h1>
+            <ul class="list-inline post-info">
+                <li class="list-inline-item">
+                    Frisbee Position: <span class="info-highlight">Striker</span>
+                </li>
+                <li class="list-inline-item">
+                    Donut Choice: <span class="info-highlight">Red Velvet</span>
+                </li>
+                <li class="list-inline-item">
+                    Secret Skill: <span class="info-highlight">Short Scale Ping Pong</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-8 order-sm-1 order-2">
+            {{ .Content }}
+        </div>
+        <div class="col-sm-4 order-sm-2 col-7 order-1 mx-auto">
+            <img src="/images/photo-amanda-dobbyn.jpg" alt="" class="img-fluid rounded-circle mb-3">
+        </div>
+    </div>
+    <div class="divider"></div>
 </div>
